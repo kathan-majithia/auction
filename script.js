@@ -112,3 +112,6 @@ document.getElementById("skipButton").addEventListener("click", () => {
     currentQuestionIndex += 1
     nextQuestion();
 });
+
+populateTeamTable();
+// nextQuestion();
