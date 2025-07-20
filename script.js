@@ -82,3 +82,29 @@ document.getElementById("nextButton").addEventListener("click", () => {
     nextQuestion();
 });
 
+document.getElementById("finalBidButton").addEventListener("click", () => {
+    // const highestBidder = teams.reduce((prev, current) => (prev.question1Bid > current.question1Bid) ? prev : current);
+
+    if (teams[hb]) {
+        if (teams[hb].remainingCoins >= currentBid) {
+            if(teams[hb].question1Bid == 0){
+                teams[hb].question1Bid = currentBid;    
+            }
+            else{
+                teams[hb].question2Bid = currentBid;
+            }
+            teams[hb].remainingCoins -= currentBid;
+            alert(`${teams[hb].name} wins with a bid of ${currentBid}`);
+            populateTeamTable()
+        } else {
+            alert("Not enough coins to finalize the bid.");
+        }
+    }
+    // problemStatements.splice(currentQuestionIndex, 1);
+    // currentQuestionIndex -= 1;
+    taken[currentQuestionIndex] = 1;
+    // currentQuestionIndex += 1
+    currentBid = 0;
+    // nextQuestion();
+});
+
