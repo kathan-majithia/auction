@@ -51,4 +51,17 @@ function populateTeamTable() {
     });
 }
 
+function nextQuestion() {
+    // if (problemStatements.length === 0) {
+    //     alert("No more questions available.");
+    //     return;
+    // }
+    currentBid = 0
+    if(currentQuestionIndex == problemStatements.length || currentQuestionIndex == -1)
+        currentQuestionIndex = 0
+    while(taken[currentQuestionIndex] == 1 || currentQuestionIndex == -1)
+        currentQuestionIndex += 1;
+    document.getElementById("problemStatement").value = `${problemStatements[currentQuestionIndex]}`;
+    document.getElementById("curb").value = `Current Bid: ${currentBid}`;
+}
 
