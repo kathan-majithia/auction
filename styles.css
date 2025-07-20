@@ -19,4 +19,11 @@ h1 {
     color: #333;
 }
 
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
 
