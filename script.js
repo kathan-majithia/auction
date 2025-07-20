@@ -23,5 +23,6 @@ const problemStatements = [
     "Convert 1D to 2D array with conditions"
 ];
 
+let taken = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 
