@@ -29,4 +29,9 @@ let currentBid = 0;
 let currentQuestionIndex = -1;
 let hb = -1
 
+if(currentQuestionIndex == -1){
+    document.getElementById("problemStatement").value = `Press Next to get question`;
+}
+
+
 
