@@ -108,3 +108,7 @@ document.getElementById("finalBidButton").addEventListener("click", () => {
     // nextQuestion();
 });
 
+document.getElementById("skipButton").addEventListener("click", () => {
+    currentQuestionIndex += 1
+    nextQuestion();
+});
