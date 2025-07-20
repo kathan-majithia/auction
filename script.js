@@ -34,4 +34,21 @@ if(currentQuestionIndex == -1){
 }
 
 
+function populateTeamTable() {
+    const tableBody = document.getElementById("teamTableBody");
+    tableBody.innerHTML = "";
+    teams.forEach((team, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${team.name}</td>
+            <td><button onclick="placeBid(${index})">Bid</button></td>
+            <td>${team.question1Bid}</td>
+            <td>${team.question2Bid}</td>
+            <td>${team.remainingCoins}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
 
