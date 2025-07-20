@@ -65,3 +65,15 @@ function nextQuestion() {
     document.getElementById("curb").value = `Current Bid: ${currentBid}`;
 }
 
+function placeBid(teamIndex) {
+    if (teams[teamIndex].remainingCoins >= currentBid) {
+        // teams[teamIndex].remainingCoins -= currentBid;
+        currentBid += 10;
+        document.getElementById("curb").value = `Current Bid: ${currentBid} | Highest Bidder : ${teams[teamIndex].name}`;
+        hb = teamIndex
+        // populateTeamTable();
+    } else {
+        alert("Not enough coins to place this bid.");
+    }
+}
+
