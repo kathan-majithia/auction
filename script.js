@@ -77,3 +77,8 @@ function placeBid(teamIndex) {
     }
 }
 
+document.getElementById("nextButton").addEventListener("click", () => {
+    currentQuestionIndex += 1
+    nextQuestion();
+});
+
