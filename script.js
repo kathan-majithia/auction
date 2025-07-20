@@ -25,4 +25,8 @@ const problemStatements = [
 
 let taken = [0,0,0,0,0,0,0,0,0,0,0,0,0]
 
+let currentBid = 0;
+let currentQuestionIndex = -1;
+let hb = -1
+
 
